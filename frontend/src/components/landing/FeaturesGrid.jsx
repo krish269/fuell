@@ -5,52 +5,59 @@ import PhoneMockup from "./PhoneMockup";
 
 const FeatureCard = ({ feature }) => {
   const isLime = feature.accent === "lime";
+  const borderColor = isLime ? "border-[#D4FF00]" : "border-[#FF2D2D]";
+  const tagColor = isLime ? "bg-[#D4FF00]" : "bg-[#FF2D2D]";
+
   return (
-    <motion.div
+    <motion.article
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -6 }}
       data-testid={`feature-${feature.id}`}
-      className={`relative bg-[#111111] border-2 ${
-        isLime ? "border-[#D4FF00]" : "border-[#FF2D2D]"
-      } p-6 lg:p-8 overflow-hidden flex flex-col ${
-        feature.large ? "md:col-span-2 md:row-span-2" : ""
+      className={`relative bg-[#111111] border-2 ${borderColor} overflow-hidden ${
+        feature.large ? "md:col-span-2" : ""
       }`}
     >
-      <div className="font-mono-display text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-3">
-        // FEATURE
-      </div>
-
-      <h3
-        className={`font-anton uppercase ${
-          feature.large ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl"
-        } tracking-tight leading-[0.95] text-white`}
-      >
-        {feature.title}
-      </h3>
-
-      <p className="mt-4 text-zinc-400 leading-relaxed text-sm md:text-base">
-        {feature.desc}
-      </p>
-
-      <div className={`mt-6 flex-1 flex items-end justify-center ${feature.large ? "min-h-[420px]" : "min-h-[280px]"}`}>
-        <PhoneMockup
-          src={ASSETS.phones[feature.image]}
-          alt={feature.title}
-          className={feature.large ? "max-h-[520px]" : "max-h-[360px]"}
-        />
-      </div>
-
       <div
-        className={`absolute top-0 right-0 ${
-          isLime ? "bg-[#D4FF00]" : "bg-[#FF2D2D]"
-        } text-black font-anton px-3 py-1 text-xs uppercase`}
+        className={`p-6 lg:p-8 gap-6 lg:gap-8 h-full ${
+          feature.large ? "flex flex-col md:flex-row md:items-center" : "flex flex-col"
+        }`}
       >
+        <div className={`flex flex-col ${feature.large ? "md:flex-1" : ""}`}>
+          <div className="font-mono-display text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-3">
+            // FEATURE
+          </div>
+          <h3
+            className={`font-anton uppercase tracking-tight leading-[0.95] text-white ${
+              feature.large ? "text-3xl md:text-4xl lg:text-5xl" : "text-2xl md:text-3xl"
+            }`}
+          >
+            {feature.title}
+          </h3>
+          <p className="mt-4 text-zinc-400 leading-relaxed text-sm md:text-base">
+            {feature.desc}
+          </p>
+        </div>
+
+        <div
+          className={`flex justify-center ${
+            feature.large ? "md:flex-1 md:max-w-md" : "mt-4"
+          }`}
+        >
+          <PhoneMockup
+            src={ASSETS.phones[feature.image]}
+            alt={feature.title}
+            className={feature.large ? "max-h-[480px]" : "max-h-[340px]"}
+          />
+        </div>
+      </div>
+
+      <div className={`absolute top-0 right-0 ${tagColor} text-black font-anton px-3 py-1 text-xs uppercase`}>
         ◆
       </div>
-    </motion.div>
+    </motion.article>
   );
 };
 
@@ -76,7 +83,7 @@ const FeaturesGrid = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
         {FEATURES.map((feature) => (
           <FeatureCard key={feature.id} feature={feature} />
         ))}
