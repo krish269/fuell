@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 const ASSETS = {
-  appIcon: "https://customer-assets.emergentagent.com/job_fuel-timer-1/artifacts/2801rdtu_image.png",
+  appIcon: "https://customer-assets.emergentagent.com/job_fuel-timer-1/artifacts/jq5cgrzk_fuel_logo.png",
   // screensA = Stop Doomscroll, Spend Fuel, Clean Feeds, Habits (panels 0..3)
   screensA: "https://customer-assets.emergentagent.com/job_fuel-timer-1/artifacts/tdxmxcpi_image.png",
   // screensB = Habits, Auto-Count Reps, Challenges, Trajectory (panels 0..3)
