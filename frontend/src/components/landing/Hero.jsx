@@ -44,7 +44,7 @@ const Hero = () => (
         {...fadeUp}
         transition={{ duration: 0.7, delay: 0.1 }}
         data-testid="hero-heading"
-        className="font-anton text-[14vw] md:text-[10vw] lg:text-[9rem] xl:text-[11rem] leading-[0.82] tracking-tighter uppercase text-white"
+        className="font-anton text-[11vw] md:text-[8vw] lg:text-[7rem] xl:text-[8.5rem] leading-[0.85] tracking-tighter uppercase text-white"
       >
         STOP <br className="md:hidden" />
         DOOM<span className="text-[#FF2D2D]">SCROLL</span>ING.
