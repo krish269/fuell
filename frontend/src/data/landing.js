@@ -13,13 +13,13 @@ const CDN = "https://customer-assets.emergentagent.com/job_fuel-timer-1/artifact
 export const ASSETS = {
   logo: `${CDN}/jq5cgrzk_fuel_logo.png`,
   phones: {
-    spendFuel: `${CDN}/ffwjait5_1.png`, // yellow 5/10/15 min timer
-    habits: `${CDN}/jw0zlj3a_2.png`, // Pick Your Activities grid
-    home: `${CDN}/rljnwbt9_3.png`, // 12%(30m) dashboard
-    pushups: `${CDN}/xytrgdlc_4.png`, // camera pose tracking
-    socialLite: `${CDN}/ghzlgna3_5.png`, // Hide Reels / Explore toggles
-    challenges: `${CDN}/hlrzz3bf_6.png`, // 75 Hard / 75 Soft / 30 Hard
-    blocked: `${CDN}/ptr2ghs3_7.png`, // "Fuel has blocked your app"
+    spendFuel: `${CDN}/a62ctxr2_2nd.png`, // yellow "Take a deep breath" / 5-10-15 min picker
+    habits: `${CDN}/sjrl7suq_2.png`, // Hydration / Steps / Workout grid
+    home: `${CDN}/74uwjywr_3.png`, // 12%(30m) low fuel dashboard
+    pushups: `${CDN}/ibsxfbdu_4.png`, // camera-counted pushups
+    socialLite: `${CDN}/dulxdl5o_5.png`, // Hide Reels / Explore / Shorts toggles
+    challenges: `${CDN}/il2vm82v_6.png`, // 75 Hard / 75 Soft / 30 Hard list
+    blocked: `${CDN}/v8abjmje_7.png`, // "Fuel has blocked your app"
   },
 };
 
